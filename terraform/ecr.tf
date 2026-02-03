@@ -1,5 +1,5 @@
 resource "aws_ecr_repository" "app_repo" {
-  name                 = "assignment1-app"
+  name                 = "app"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
@@ -7,12 +7,12 @@ resource "aws_ecr_repository" "app_repo" {
   }
 
   tags = {
-    Name = "CLO838-Assignment1-ECR-app"
+    Name = "CLO835-Assignment1-ECR-app"
   }
 }
 
 resource "aws_ecr_repository" "mysql_repo" {
-  name                 = "assignment1-mysql"
+  name                 = "db"
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
@@ -20,6 +20,6 @@ resource "aws_ecr_repository" "mysql_repo" {
   }
 
   tags = {
-    Name = "CLO838-Assignment1-ECR-mysql"
+    Name = "CLO835-Assignment1-ECR-mysql"
   }
 }
